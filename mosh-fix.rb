@@ -1,4 +1,4 @@
-class Mosh < Formula
+class MoshFix < Formula
   desc "Remote terminal application"
   homepage "https://mosh.org"
   license "GPL-3.0-or-later"

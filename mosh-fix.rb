@@ -82,8 +82,8 @@ class MoshFix < Formula
 
     # Uncomment `if build.head?` when Xcode 12.5 patch is removed
     system "./autogen.sh" # if build.head?
-    system "./configure", "--prefix=#{prefix}", "--enable-completion"
-    system "make", "install"
+    system "./configure", "--prefix=#{prefix}", "--enable-completion", "CXXFLAGS=-std=gnu++20"
+    system "make", "CXXFLAGS=-std=gnu++20", "install"
   end
 
   test do
